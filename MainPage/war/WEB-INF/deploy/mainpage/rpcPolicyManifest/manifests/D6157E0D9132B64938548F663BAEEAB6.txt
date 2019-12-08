@@ -1,0 +1,2 @@
+serviceClass: kr.ac.sunmoon.client.KJMembershipService
+path: 2FC9BD2419280243FC1A88343E358A84.gwt.rpc

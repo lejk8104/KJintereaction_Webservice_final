@@ -1,0 +1,95 @@
+/** Add css rules here for your application. */
+
+
+/** Example rules used by the template application (remove for your app) */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #777777;
+  margin: 40px 0px 70px;
+  text-align: center;
+}
+
+.sendButton {
+  display: block;
+  font-size: 16pt;
+}
+
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+  width: 400px;
+}
+
+.dialogVPanel {
+  margin: 5px;
+}
+
+.serverResponseLabelError {
+  color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+  margin: 15px 6px 6px;
+}
+
+.hpTop {
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.imgLogo {
+	margin-left: 50px;
+}
+
+.hpSearch {
+	width: 400px;
+	height: 70px;
+	margin-left: 10px;
+	border-radius: 100px;
+	border: 2px inset #59B2FF;
+	font-size: 15px;
+}
+
+.txtSearch {
+	width: 500px;
+	height: 25px;
+	margin-top: 20px;
+	margin-left: 50px;
+}
+
+.imgSearch {
+	margin-top: 20px;
+	width: 25px;
+	height: 25px;
+}
+
+.loginBtn {
+	margin-left: 40px;
+	margin-right: 40px;
+	border-right: 200px;
+	margin-top: 10px;
+	width: 100px;
+	height: 50px;
+	font-size: 25px;
+}
+
+.chatBtn {
+	margin-left: 40px;
+	margin-right: 40px;
+	border-right: 200px;
+	margin-top:40px;
+	width: 100px;
+	height: 50px;
+	font-size: 25px;
+}
+
+.menuLb {
+	width: 200px;
+	height: 80px;
+	font-size: 25px;
+}
+
+.bar {
+	font-size: 200px;
+}
