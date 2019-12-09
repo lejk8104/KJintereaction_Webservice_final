@@ -135,6 +135,8 @@ public class KJMembershipServiceImpl extends RemoteServiceServlet implements KJM
 //			rs1.close();
 			stmt.close();
 			con.close();
+			
+			addTotalNumber(local);
 		}
 		catch(Exception e)
 			{
@@ -314,5 +316,24 @@ public class KJMembershipServiceImpl extends RemoteServiceServlet implements KJM
 			}
 		}
 		return null;
+	}
+	private void addTotalNumber(String local) {
+		try {
+			String url = "jdbc:mysql://localhost:3306/sdp2?useSSL=false";
+			String user = "root";
+			String password_ = "seiya411";
+			
+			Connection con = DriverManager.getConnection(url, user, password_);
+			Statement stmt = con.createStatement();
+			String sql = "UPDATE local SET Total = Total + 1 where local.Local = \"" + local + "\";";
+			int n = stmt.executeUpdate(sql);
+			System.out.println(n);
+
+//			rs1.close();
+			stmt.close();
+			con.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

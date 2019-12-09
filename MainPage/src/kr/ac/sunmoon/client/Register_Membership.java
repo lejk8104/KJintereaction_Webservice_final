@@ -123,7 +123,7 @@ public class Register_Membership extends Window{
         
         //Birth
 //        final DateField dataBirth = new DateField("Date of birth", "BirthData", 200);
-        final DateField dataBirth = new DateField("Date of birth", "d/m/y", 200);
+        final DateField dataBirth = new DateField("Date of birth", "BirthData", 200);
         dataBirth.setAllowBlank(false);
         firstTab.add(dataBirth);
         
@@ -144,7 +144,7 @@ public class Register_Membership extends Window{
     	listcity.setFieldLabel("Select City");  
     	listcity.setStore(citiesStore);  
     	listcity.setDisplayField("cityName");  
-    	listcity.setValueField("local");  
+    	listcity.setValueField("cityData");  
     	listcity.setMode(ComboBox.LOCAL);  
 	    listcity.setTriggerAction(ComboBox.ALL);  
 	    listcity.setLinked(true);  
@@ -481,27 +481,27 @@ public class Register_Membership extends Window{
     }
     
     private Object[][] countries = new Object[][]{  
-        new Object[]{"K", "Korean"},  
-        new Object[]{"J", "Japanese"},  
+        new Object[]{"Korean", "Korean"},  
+        new Object[]{"Japanese", "Japanese"},  
     };
     
     private Object[][] cities = new Object[][]{  
-        new Object[]{new Integer(001), "K", "Gyeonggi-do"},  
-        new Object[]{new Integer(002), "K", "Seoul"},  
-        new Object[]{new Integer(003), "K", "Gangwon-do"},  
-        new Object[]{new Integer(004), "K", "Chungcheongbuk-do"},  
-        new Object[]{new Integer(005), "K", "Chungcheongnam-do"},  
-        new Object[]{new Integer(006), "K", "Gyeongsangbuk-do"},  
-        new Object[]{new Integer(007), "K", "Gyeongsangnam-do"},  
+        new Object[]{"Gyeonggi-do", "Korean", "Gyeonggi-do"},  
+        new Object[]{"Seoul", "Korean", "Seoul"},  
+        new Object[]{"Gangwon-do", "Korean", "Gangwon-do"},  
+        new Object[]{"Chungcheongbuk-do", "Korean", "Chungcheongbuk-do"},  
+        new Object[]{"Chungcheongnam-do", "Korean", "Chungcheongnam-do"},  
+        new Object[]{"Gyeongsangbuk-do", "Korean", "Gyeongsangbuk-do"},  
+        new Object[]{"Gyeongsangnam-do", "Korean", "Gyeongsangnam-do"},  
 //        new Object[]{new Integer(008), "K", "Jeollabuk-do"},  
 //        new Object[]{new Integer(009), "K", "Jeollanam-do "},  
-        new Object[]{new Integer(0010), "J", "Hokkaido"}, 
-        new Object[]{new Integer(0011), "J", "Tohoku"},
-        new Object[]{new Integer(0012), "J", "Chubu"},
-        new Object[]{new Integer(0013), "J", "Kinki"},
-        new Object[]{new Integer(0014), "J", "Chugoku"},
-        new Object[]{new Integer(0015), "J", "Shikoku"},
-        new Object[]{new Integer(0016), "J", "Kyushu"}
+        new Object[]{"Hokkaido", "Japanese", "Hokkaido"}, 
+        new Object[]{"Tohoku", "Japanese", "Tohoku"},
+        new Object[]{"Chubu", "Japanese", "Chubu"},
+        new Object[]{"Kinki", "Japanese", "Kinki"},
+        new Object[]{"Chugoku", "Japanese", "Chugoku"},
+        new Object[]{"Shikoku", "Japanese", "Shikoku"},
+        new Object[]{"Kyushu", "Japanese", "Kyushu"}
     };
     
     private Object[][] InterestList = new Object[][]{  
