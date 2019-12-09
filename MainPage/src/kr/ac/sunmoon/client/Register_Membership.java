@@ -164,8 +164,8 @@ public class Register_Membership extends Window{
         tabPanel.add(firstTab);  
         
         //list store 선언
-        final Store preference = new SimpleStore(new String[] {"Text","Preference","data"}, Getpreference());
-        preference.load();
+//        final Store preference = new SimpleStore(new String[] {"Text","Preference","data"}, Getpreference());
+//        preference.load();
         final Store interest1 = new SimpleStore(new String[] {"Text","interests"}, InterestList);
         interest1.load();
         final Store interest2 = new SimpleStore(new String[] {"Text","interests"}, InterestList);
@@ -176,12 +176,12 @@ public class Register_Membership extends Window{
         interest4.load();
         final Store interest5 = new SimpleStore(new String[] {"Text","interests"}, InterestList);
         interest5.load();
-        final Store a = new SimpleStore(new String[] {"Text","A","data"}, GetA());
-        a.load();
-        final Store b = new SimpleStore(new String[] {"Text","B","data"}, GetB());
-        b.load();
-        final Store c = new SimpleStore(new String[] {"Text","C","data"}, GetC());
-        c.load();
+//        final Store a = new SimpleStore(new String[] {"Text","A","data"}, GetA());
+//        a.load();
+//        final Store b = new SimpleStore(new String[] {"Text","B","data"}, GetB());
+//        b.load();
+//        final Store c = new SimpleStore(new String[] {"Text","C","data"}, GetC());
+//        c.load();
         
         // Survey
         final Panel secondTab = new Panel();  
@@ -192,18 +192,18 @@ public class Register_Membership extends Window{
         secondTab.setPaddings(15);  
         
         // preference
-        final ComboBox listpreference = new ComboBox();
-        listpreference.setAllowBlank(false);
-        listpreference.setMinChars(1);
-        listpreference.setFieldLabel("Preference");
-        listpreference.setStore(preference);
-        listpreference.setDisplayField("Text");
-        listpreference.setEmptyText("Select Preference"); 
-        listpreference.setTriggerAction(ComboBox.ALL); //? 모르겠다
-        listpreference.setTypeAhead(true);  // 이를 채우고 자동 선택한다
-        listpreference.setSelectOnFocus(true); //데이터값 수신할 떄 자동채움
-        listpreference.setWidth(300);  
-        listpreference.setResizable(true); //?
+//        final ComboBox listpreference = new ComboBox();
+//        listpreference.setAllowBlank(false);
+//        listpreference.setMinChars(1);
+//        listpreference.setFieldLabel("Preference");
+//        listpreference.setStore(preference);
+//        listpreference.setDisplayField("Text");
+//        listpreference.setEmptyText("Select Preference"); 
+//        listpreference.setTriggerAction(ComboBox.ALL); //? 모르겠다
+//        listpreference.setTypeAhead(true);  // 이를 채우고 자동 선택한다
+//        listpreference.setSelectOnFocus(true); //데이터값 수신할 떄 자동채움
+//        listpreference.setWidth(300);  
+//        listpreference.setResizable(true); //?
 //        secondTab.add(listpreference);
         
         Panel inputdataform = new Panel();
@@ -286,57 +286,57 @@ public class Register_Membership extends Window{
 //        final CheckBox_Interest checkbox = new CheckBox_Interest();
 //        secondTab.add(checkbox);
         
-        Label txtlabel = new Label("Another interest:         ");
-        inputdataform.add(txtlabel, new AnchorLayoutData("40%"));
-        TextBox inputinterest = new TextBox();
-        
-        inputdataform.add(inputinterest, new AnchorLayoutData("60%"));
-        secondTab.add(inputdataform);
+//        Label txtlabel = new Label("Another interest:         ");
+//        inputdataform.add(txtlabel, new AnchorLayoutData("40%"));
+//        TextBox inputinterest = new TextBox();
+//        
+//        inputdataform.add(inputinterest, new AnchorLayoutData("60%"));
+//        secondTab.add(inputdataform);
         
         //A
-        final ComboBox A = new ComboBox();
-        A.setAllowBlank(false);
-        A.setMinChars(1);
-        A.setFieldLabel("A");
-        A.setStore(a);
-        A.setDisplayField("Text");
-        A.setEmptyText("Select A"); 
-        A.setTriggerAction(ComboBox.ALL); //? 모르겠다
-        A.setTypeAhead(true);  // 이를 채우고 자동 선택한다
-        A.setSelectOnFocus(true); //데이터값 수신할 떄 자동채움
-        A.setWidth(300);  
-        A.setResizable(true); //?
-        secondTab.add(A);
+//        final ComboBox A = new ComboBox();
+//        A.setAllowBlank(false);
+//        A.setMinChars(1);
+//        A.setFieldLabel("A");
+//        A.setStore(a);
+//        A.setDisplayField("Text");
+//        A.setEmptyText("Select A"); 
+//        A.setTriggerAction(ComboBox.ALL); //? 모르겠다
+//        A.setTypeAhead(true);  // 이를 채우고 자동 선택한다
+//        A.setSelectOnFocus(true); //데이터값 수신할 떄 자동채움
+//        A.setWidth(300);  
+//        A.setResizable(true); //?
+//        secondTab.add(A);
         
         //B
-        final ComboBox B = new ComboBox();
-        B.setAllowBlank(false);
-        B.setMinChars(1);
-        B.setFieldLabel("B");
-        B.setStore(b);
-        B.setDisplayField("Text");
-        B.setEmptyText("Select B"); 
-        B.setTriggerAction(ComboBox.ALL); //? 모르겠다
-        B.setTypeAhead(true);  // 이를 채우고 자동 선택한다
-        B.setSelectOnFocus(true); //데이터값 수신할 떄 자동채움
-        B.setWidth(300);  
-        B.setResizable(true); //?
-        secondTab.add(B);
-        
+//        final ComboBox B = new ComboBox();
+//        B.setAllowBlank(false);
+//        B.setMinChars(1);
+//        B.setFieldLabel("B");
+//        B.setStore(b);
+//        B.setDisplayField("Text");
+//        B.setEmptyText("Select B"); 
+//        B.setTriggerAction(ComboBox.ALL); //? 모르겠다
+//        B.setTypeAhead(true);  // 이를 채우고 자동 선택한다
+//        B.setSelectOnFocus(true); //데이터값 수신할 떄 자동채움
+//        B.setWidth(300);  
+//        B.setResizable(true); //?
+//        secondTab.add(B);
+//        
         //C
-        final ComboBox C = new ComboBox();
-        C.setAllowBlank(false);
-        C.setMinChars(1);
-        C.setFieldLabel("C");
-        C.setStore(c);
-        C.setDisplayField("Text");
-        C.setEmptyText("Select C"); 
-        C.setTriggerAction(ComboBox.ALL); //? 모르겠다
-        C.setTypeAhead(true);  // 이를 채우고 자동 선택한다
-        C.setSelectOnFocus(true); //데이터값 수신할 떄 자동채움
-        C.setWidth(300);  
-        C.setResizable(true); //?
-        secondTab.add(C);
+//        final ComboBox C = new ComboBox();
+//        C.setAllowBlank(false);
+//        C.setMinChars(1);
+//        C.setFieldLabel("C");
+//        C.setStore(c);
+//        C.setDisplayField("Text");
+//        C.setEmptyText("Select C"); 
+//        C.setTriggerAction(ComboBox.ALL); //? 모르겠다
+//        C.setTypeAhead(true);  // 이를 채우고 자동 선택한다
+//        C.setSelectOnFocus(true); //데이터값 수신할 떄 자동채움
+//        C.setWidth(300);  
+//        C.setResizable(true); //?
+//        secondTab.add(C);
 
         tabPanel.add(secondTab);
         
@@ -353,12 +353,17 @@ public class Register_Membership extends Window{
         		membershipdata[6] = dataBirth.getText().trim();
         		membershipdata[7] = listcountry.getText().trim();
         		membershipdata[8] = listcity.getText().trim();
+        		membershipdata[9] = listinterest1.getText();
+        		membershipdata[10] = listinterest2.getText();
+        		membershipdata[11] = listinterest3.getText();
+        		membershipdata[12] = listinterest4.getText();
+        		membershipdata[13] = listinterest5.getText();
         		
         		// survey data list 선언
-        		surveydata[0] = listinterest5.getText().trim();
-        		surveydata[1] = A.getText().trim();
-        		surveydata[2] = B.getText().trim();
-        		surveydata[3] = C.getText().trim();
+//        		surveydata[0] = listinterest5.getText().trim();
+//        		surveydata[1] = A.getText().trim();
+//        		surveydata[2] = B.getText().trim();
+//        		surveydata[3] = C.getText().trim();
         		
         		// interest data list 선언
 //        		Record[] userInterests = checkbox.getCheckbox_data();
@@ -376,13 +381,13 @@ public class Register_Membership extends Window{
 //        				return;
 //        			}
 //        		}
-        		for(int i=0; i<surveydata.length; i++) {
-        			if(surveydata[i].equals("")) {
-        				popup.setTitle("Please, input your survey data");
-        				popup.show();
-        				return;
-        			}
-        		}
+//        		for(int i=0; i<surveydata.length; i++) {
+//        			if(surveydata[i].equals("")) {
+//        				popup.setTitle("Please, input your survey data");
+//        				popup.show();
+//        				return;
+//        			}
+//        		}
         		for(int i=0; i<membershipdata.length; i++) {
         			if(membershipdata[i].equals("")) {
         				popup.setTitle("Please, input your membership data");
@@ -398,18 +403,26 @@ public class Register_Membership extends Window{
 				kjMember.setName(membershipdata[3]);
 				kjMember.setGender(membershipdata[4]);
 				kjMember.setEmail(membershipdata[5]);
-//				kjMember.setBirth(membershipdata[6]);
+				kjMember.setBirth(membershipdata[6]);
 				kjMember.setCountry(membershipdata[7]);
-				kjMember.setLocal(membershipdata[7]);
+				kjMember.setLocal(membershipdata[8]);
+				
+        		String[] interests = new String[5];
+        		interests[0] = membershipdata[9];
+        		interests[1] = membershipdata[10];
+        		interests[2] = membershipdata[11];
+        		interests[3] = membershipdata[12];
+        		interests[4] = membershipdata[13];
+        		kjMember.setInterests(interests);
 				
 				//survey data set
-				Survey_data survey_set = new Survey_data();
-				survey_set.setID(membershipdata[0]);
-				survey_set.setName(membershipdata[3]);
-				survey_set.setPreference(surveydata[0]);
-				survey_set.setA(surveydata[1]);
-				survey_set.setB(surveydata[2]);
-				survey_set.setC(surveydata[3]);
+//				Survey_data survey_set = new Survey_data();
+//				survey_set.setID(membershipdata[0]);
+//				survey_set.setName(membershipdata[3]);
+//				survey_set.setPreference(surveydata[0]);
+//				survey_set.setA(surveydata[1]);
+//				survey_set.setB(surveydata[2]);
+//				survey_set.setC(surveydata[3]);
 				
 				//Korean survey data Statistice
 				
@@ -506,43 +519,43 @@ public class Register_Membership extends Window{
         new Object[] {"그림그리기", "interests"}
     };
     
-    private Object[][] Getpreference()  {
-    	return new Object[][] {
-    		new Object[] {"Very Bad","preference", new Integer(-2)},
-    		new Object[] {"Bad","preference", new Integer(-1)},
-    		new Object[] {"So So","preference", new Integer(0)},
-    		new Object[] {"Good","preference", new Integer(1)},
-    		new Object[] {"Very Good","preference", new Integer(2)},
-    	};
-    }    
-    
-    private Object[][] GetA()  {
-    	return new Object[][] {
-    		new Object[] {"Very Bad","a", new Integer(-2)},
-    		new Object[] {"Bad","a", new Integer(-1)},
-    		new Object[] {"So So","a", new Integer(0)},
-    		new Object[] {"Good","a", new Integer(1)},
-    		new Object[] {"Very Good","a", new Integer(2)},
-    	};
-    }
-    
-    private Object[][] GetB()  {
-    	return new Object[][] {
-    		new Object[] {"Very Bad","b", new Integer(-2)},
-    		new Object[] {"Bad","b", new Integer(-1)},
-    		new Object[] {"So So","b", new Integer(0)},
-    		new Object[] {"Good","b", new Integer(1)},
-    		new Object[] {"Very Good","b", new Integer(2)},
-    	};
-    }
-    
-    private Object[][] GetC()  {
-    	return new Object[][] {
-    		new Object[] {"Very Bad","c", new Integer(-2)},
-    		new Object[] {"Bad","c", new Integer(-1)},
-    		new Object[] {"So So","c", new Integer(0)},
-    		new Object[] {"Good","c", new Integer(1)},
-    		new Object[] {"Very Good","c", new Integer(2)},
-    	};
-    }
+//    private Object[][] Getpreference()  {
+//    	return new Object[][] {
+//    		new Object[] {"Very Bad","preference", new Integer(-2)},
+//    		new Object[] {"Bad","preference", new Integer(-1)},
+//    		new Object[] {"So So","preference", new Integer(0)},
+//    		new Object[] {"Good","preference", new Integer(1)},
+//    		new Object[] {"Very Good","preference", new Integer(2)},
+//    	};
+//    }    
+//    
+//    private Object[][] GetA()  {
+//    	return new Object[][] {
+//    		new Object[] {"Very Bad","a", new Integer(-2)},
+//    		new Object[] {"Bad","a", new Integer(-1)},
+//    		new Object[] {"So So","a", new Integer(0)},
+//    		new Object[] {"Good","a", new Integer(1)},
+//    		new Object[] {"Very Good","a", new Integer(2)},
+//    	};
+//    }
+//    
+//    private Object[][] GetB()  {
+//    	return new Object[][] {
+//    		new Object[] {"Very Bad","b", new Integer(-2)},
+//    		new Object[] {"Bad","b", new Integer(-1)},
+//    		new Object[] {"So So","b", new Integer(0)},
+//    		new Object[] {"Good","b", new Integer(1)},
+//    		new Object[] {"Very Good","b", new Integer(2)},
+//    	};
+//    }
+//    
+//    private Object[][] GetC()  {
+//    	return new Object[][] {
+//    		new Object[] {"Very Bad","c", new Integer(-2)},
+//    		new Object[] {"Bad","c", new Integer(-1)},
+//    		new Object[] {"So So","c", new Integer(0)},
+//    		new Object[] {"Good","c", new Integer(1)},
+//    		new Object[] {"Very Good","c", new Integer(2)},
+//    	};
+//    }
 }
