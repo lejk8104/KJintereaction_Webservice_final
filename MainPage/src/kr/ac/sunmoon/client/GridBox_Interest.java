@@ -26,6 +26,7 @@ public class GridBox_Interest extends GridPanel  {
 		super();	
 		
 		kjmember = ChatService.kjmember;
+//		String[] interests = kjmember.getInterests();// not working
 		
 		// data setting 1: store ����
         final Store interestStore = new Store(proxy, reader);  
@@ -57,13 +58,23 @@ public class GridBox_Interest extends GridPanel  {
 	// ������ üũ�ڽ�
 	private Object[][] InterestList(){
         return new Object[][]{  
-                new Object[]{"kjmember"},  
-                new Object[]{"chatting"},  
-                new Object[]{"fencing"},  
-                new Object[]{"trip"},  
-                new Object[]{"movie"},    
+                new Object[]{"kjmember","interest"},  
+                new Object[]{"chatting","interest"},  
+                new Object[]{"fencing","interest"},  
+                new Object[]{"trip","interest"},  
+                new Object[]{"movie","interest"},    
         };  
     }  
+	//kjmathod : is not working;;;
+    private String getid() {
+    	String id = kjmember.getID();
+		return id;  //not working
+    }
+    private static String[] getinterest() {
+    	
+    	String[] interestlist = kjmember.getInterests();
+		return interestlist;  //not working
+	}
 	
 	// prefer list read
     RecordDef recordDef = new RecordDef(  

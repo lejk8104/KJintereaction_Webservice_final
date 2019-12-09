@@ -128,7 +128,7 @@ public class MainPage implements EntryPoint  {
 //        third_Column.add(imgsearch);
 //        hpsearch.add(third_Column, new ColumnLayoutData(0.1));
         
-        // login logo
+        // login logoz
         fourth_Column = new Panel();  
         fourth_Column.setLayout(new FormLayout());  
         fourth_Column.setBorder(false);
@@ -442,6 +442,7 @@ public class MainPage implements EntryPoint  {
         accordionPanel.setLayout(new AccordionLayout(true));  
   
         //mypage
+        Panel mypagePanel = new Panel();    // 이두개 해결하면 동적으로 만드는 거 가능
         mypagePanel.setTitle("Mypage");
         
         mypagePanel.add(loginform());
