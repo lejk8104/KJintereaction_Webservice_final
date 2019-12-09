@@ -58,6 +58,7 @@ public class MainPage implements EntryPoint  {
     private static ChatService chatservice;
     private static CheckBox_Userimage userlist = new CheckBox_Userimage();
     static Button logbtn;
+    static Advertise_KJinteration piechartPanel;
     
     private static Panel nomalPanel;
 	
@@ -265,10 +266,29 @@ public class MainPage implements EntryPoint  {
         tabPanel.setPlain(true);  
         tabPanel.setActiveTab(0);  
         
-        Panel secondTab = new Panel();
+        final Panel secondTab = new Panel();
         secondTab.setTitle("Main Page");
-        Advertise_KJinteration piechartPanel = new Advertise_KJinteration();
-        secondTab.add(piechartPanel);
+        
+        KJMembershipServiceAsync service = GWT.create(KJMembershipService.class);
+        service.fetchDataByLocal(new AsyncCallback<String[][]>() {
+
+			@Override
+			public void onFailure(Throwable caught) {
+				// TODO Auto-generated method stub
+				com.google.gwt.user.client.Window.alert("failed with connection");
+			}
+
+			@Override
+			public void onSuccess(String[][] result) {
+				// TODO Auto-generated method stub
+				com.google.gwt.user.client.Window.alert("succeeded in connection");
+				Advertise_KJinteration.highchart = result;
+				piechartPanel = new Advertise_KJinteration();
+				secondTab.insert(0, piechartPanel);
+			}
+        });
+//        piechartPanel = new Advertise_KJinteration();
+//        secondTab.add(piechartPanel);
         
         thirdtab.setTitle("Chatting");
         Panel nomalpanel = nomalPanel();

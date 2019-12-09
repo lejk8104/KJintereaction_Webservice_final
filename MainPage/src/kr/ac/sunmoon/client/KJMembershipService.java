@@ -14,5 +14,6 @@ public interface KJMembershipService extends RemoteService {
 	public boolean checkID(KJMember kjMember);
 	public KJMember LoginService(KJMember loginmember);
 	public KJMember[] findLCS(KJMember kjmember);
+	public String[][] fetchDataByLocal();
 
 }

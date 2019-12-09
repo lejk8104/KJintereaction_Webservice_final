@@ -13,6 +13,8 @@ import org.moxieapps.gwt.highcharts.client.labels.PieDataLabels;
 import org.moxieapps.gwt.highcharts.client.plotOptions.PiePlotOptions;
 import org.moxieapps.gwt.highcharts.client.plotOptions.PlotOptions;
 
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.gwtext.client.widgets.Panel;
 import com.gwtext.client.widgets.form.Label;
 import com.gwtext.client.widgets.layout.VerticalLayout;
@@ -21,6 +23,7 @@ import com.gwtext.client.widgets.layout.VerticalLayout;
 public class Advertise_KJinteration extends Panel{
 
 	private String [] kjinteractioncitylist = new String[16];
+	public static String[][] highchart;
 	
 	public Advertise_KJinteration() {
 		// TODO Auto-generated constructor stub
@@ -38,6 +41,23 @@ public class Advertise_KJinteration extends Panel{
 		formpanel.setWidth(950);
 		formpanel.setHeight(700);
 	    formpanel.setMargins(20, 135, 100, 20);
+	    
+//	    KJMembershipServiceAsync service = GWT.create(KJMembershipService.class);
+//        service.fetchDataByLocal(new AsyncCallback<String[][]>() {
+//
+//			@Override
+//			public void onFailure(Throwable caught) {
+//				// TODO Auto-generated method stub
+//				com.google.gwt.user.client.Window.alert("failed with connection");
+//			}
+//
+//			@Override
+//			public void onSuccess(String[][] result) {
+//				// TODO Auto-generated method stub
+//				com.google.gwt.user.client.Window.alert("succeeded in connection");
+//				highchart = result;
+//			}
+//        });
 		
 		Chart chart = createChart();
 		
@@ -87,17 +107,26 @@ public class Advertise_KJinteration extends Panel{
 	                    }  
 	                })  
 	            );  
+	        
 	        chart.addSeries(chart.createSeries()  
 	            .setName("Low KJ Interaction")  
 	            .setPoints(new Point[]{  
-	                new Point("Chungcheongnam-do", 0.06),  
-	                new Point("Hokkaido", 1.5),  
-	                new Point("Chubu", 3.78),  
-	                new Point("Chugoku", 5.0),  
-	                new Point("Gyeongsangbuk-", 9.5),  
-	                new Point("Chungcheongbuk-", 13.8),
-	                new Point("Seoul", 41.3),
-	                new Point("Gyeonggi", 45.2)
+            		new Point(highchart[0][0], Double.parseDouble(highchart[0][1])),
+            		new Point(highchart[1][0], Double.parseDouble(highchart[1][1])),
+            		new Point(highchart[2][0], Double.parseDouble(highchart[2][1])),
+            		new Point(highchart[3][0], Double.parseDouble(highchart[3][1])),
+            		new Point(highchart[4][0], Double.parseDouble(highchart[4][1])),
+            		new Point(highchart[5][0], Double.parseDouble(highchart[5][1])),
+            		new Point("else", 100 - (Double.parseDouble(highchart[0][1]) + Double.parseDouble(highchart[1][1]) + Double.parseDouble(highchart[2][1]) +
+            				Double.parseDouble(highchart[3][1]) + Double.parseDouble(highchart[4][1]) + Double.parseDouble(highchart[5][1])))
+//	                new Point("Chungcheongnam-do", 0.06),  
+//	                new Point("Hokkaido", 1.5),  
+//	                new Point("Chubu", 3.78),  
+//	                new Point("Chugoku", 5.0),  
+//	                new Point("Gyeongsangbuk-", 9.5),  
+//	                new Point("Chungcheongbuk-", 13.8),
+//	                new Point("Seoul", 41.3),
+//	                new Point("Gyeonggi", 45.2)
 	            })  
 	        );  
 	        return chart;  

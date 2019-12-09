@@ -1,19 +1,19 @@
 package kr.ac.sunmoon.server;
 
-import java.awt.List;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map.Entry;
 
-import org.apache.commons.lang3.builder.StandardToStringStyle;
-
+import com.google.gwt.text.client.DoubleRenderer;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 import kr.ac.sunmoon.client.KJMembershipService;
-import kr.ac.sunmoon.client.LoginService;
-import kr.ac.sunmoon.client.MainPage;
 import kr.ac.sunmoon.shared.KJMember;
 
 /**
@@ -266,5 +266,53 @@ public class KJMembershipServiceImpl extends RemoteServiceServlet implements KJM
 			e.printStackTrace();
 		}
 		return kjmembers;
+	}
+
+	@Override
+	public String[][] fetchDataByLocal() {
+		String[][] data = new String[6][2];
+		HashMap<String, Integer> hm = new HashMap<String, Integer>();
+		DecimalFormat df = new DecimalFormat("#.##");
+		double total = 0.0;
+		try {
+			String url = "jdbc:mysql://localhost:3306/sdp2?useSSL=false";
+			String user = "root";
+			String password_ = "seiya411";
+			
+			Connection con = DriverManager.getConnection(url, user, password_);
+			Statement stmt = con.createStatement();
+			String sql = "SELECT Local, Total FROM local;";
+			ResultSet rs1 = stmt.executeQuery(sql);
+			while(rs1.next()) {
+				hm.put(rs1.getString("Local"), rs1.getInt("Total"));
+				total += rs1.getInt("Total");
+			}			
+			rs1.close();
+			stmt.close();
+			con.close();
+			List<Integer> sortedCollection = new ArrayList<Integer>(hm.values());
+			
+			for(int i=0; i<data.length; i++) {
+				int index = sortedCollection.get(i);
+				System.out.println("index: " + index + ", total: " + total);
+				data[i][0] = getKey(hm, index);
+				data[i][1] = df.format(index/total*100);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		for(int i=0; i<data.length; i++) {
+			System.out.println(data[i][0]);
+			System.out.println(data[i][1]);
+		}
+		return data;
+	}
+	private String getKey(HashMap<String, Integer> hm, int index) {
+		for (Entry<String, Integer> entry : hm.entrySet()) {
+			if (entry.getValue().equals(index)) {
+				return entry.getKey();
+			}
+		}
+		return null;
 	}
 }

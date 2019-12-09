@@ -122,7 +122,8 @@ public class Register_Membership extends Window{
         firstTab.add(listgender);
         
         //Birth
-        final DateField dataBirth = new DateField("Date of birth", "BirthData", 200);  
+//        final DateField dataBirth = new DateField("Date of birth", "BirthData", 200);
+        final DateField dataBirth = new DateField("Date of birth", "d/m/y", 200);
         dataBirth.setAllowBlank(false);
         firstTab.add(dataBirth);
         
