@@ -268,7 +268,21 @@ public class MainPage implements EntryPoint  {
         
         final Panel secondTab = new Panel();
         secondTab.setTitle("Main Page");
+        secondTab.add(new HTML("<iframe width='560' height='315' src='https://www.youtube.com/embed/3SV36d1q740' "
+        		+ "frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>)"));
         
+        
+        
+//        piechartPanel = new Advertise_KJinteration();
+//        secondTab.add(piechartPanel);
+        
+        thirdtab.setTitle("Chatting");
+        Panel nomalpanel = nomalPanel();
+        thirdtab.add(nomalpanel);
+        //동영상 추천
+        final Panel fourthtab = new Panel();
+        
+        fourthtab.setTitle("Interest rates");
         KJMembershipServiceAsync service = GWT.create(KJMembershipService.class);
         service.fetchDataByLocal(new AsyncCallback<String[][]>() {
 
@@ -284,20 +298,9 @@ public class MainPage implements EntryPoint  {
 				com.google.gwt.user.client.Window.alert("succeeded in connection");
 				Advertise_KJinteration.highchart = result;
 				piechartPanel = new Advertise_KJinteration();
-				secondTab.insert(0, piechartPanel);
+				fourthtab.insert(0, piechartPanel);
 			}
         });
-//        piechartPanel = new Advertise_KJinteration();
-//        secondTab.add(piechartPanel);
-        
-        thirdtab.setTitle("Chatting");
-        Panel nomalpanel = nomalPanel();
-        thirdtab.add(nomalpanel);
-        //동영상 추천
-        Panel fourthtab = new Panel();
-        fourthtab.add(new HTML("<iframe width='560' height='315' src='https://www.youtube.com/embed/3SV36d1q740' "
-        		+ "frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>)"));
-        fourthtab.setTitle("Advertisement and Youtube");
         //지도 표시
         Panel fifthtab = new Panel();
         fifthtab.add(new HTML("<div id='map' style='width:500px;height:400px;'></div>)"));
