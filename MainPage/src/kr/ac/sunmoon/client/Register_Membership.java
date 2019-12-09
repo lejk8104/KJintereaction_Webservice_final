@@ -134,7 +134,7 @@ public class Register_Membership extends Window{
         listcountry.setMode(ComboBox.LOCAL);  
     	listcountry.setTriggerAction(ComboBox.ALL);  
     	listcountry.setForceSelection(true);  
-//    	listcountry.setValueField("country");  
+    	listcountry.setValueField("country");  
     	listcountry.setReadOnly(true);  
     	listcountry.setWidth(200);
 
@@ -143,7 +143,7 @@ public class Register_Membership extends Window{
     	listcity.setFieldLabel("Select City");  
     	listcity.setStore(citiesStore);  
     	listcity.setDisplayField("cityName");  
-//    	listlocal.setValueField("local");  
+    	listcity.setValueField("local");  
     	listcity.setMode(ComboBox.LOCAL);  
 	    listcity.setTriggerAction(ComboBox.ALL);  
 	    listcity.setLinked(true);  

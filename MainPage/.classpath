@@ -6,6 +6,6 @@
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/mysql-connector-java-5.1.47.jar"/>
 	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/gwtext.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/org.moxieapps.gwt.highcharts-1.7.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/org.moxieapps.gwt.highcharts-1.7.0.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
