@@ -132,7 +132,7 @@ public class MainPage implements EntryPoint  {
         fourth_Column = new Panel();  
         fourth_Column.setLayout(new FormLayout());  
         fourth_Column.setBorder(false);
-        fourth_Column.setMargins(0, 0, 0, 0);
+        fourth_Column.setMargins(30, 0, 0, 0);
 
         logbtn = new Button("Login Service", new ButtonListenerAdapter() {
         	public void onClick(Button logbtn, EventObject e) {
@@ -407,7 +407,6 @@ public class MainPage implements EntryPoint  {
 	private Panel UserPage() {
 		
 		//호출용 User Panel
-		Panel userpage = new Panel();
 		userpage.setBorder(false);
 		userpage.setLayout(new HorizontalLayout(10));
 		userpage.setPaddings(0);
@@ -443,7 +442,6 @@ public class MainPage implements EntryPoint  {
         accordionPanel.setLayout(new AccordionLayout(true));  
   
         //mypage
-        Panel mypagePanel = new Panel();
         mypagePanel.setTitle("Mypage");
         
         mypagePanel.add(loginform());
