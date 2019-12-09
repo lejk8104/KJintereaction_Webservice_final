@@ -13,8 +13,7 @@ import org.moxieapps.gwt.highcharts.client.labels.PieDataLabels;
 import org.moxieapps.gwt.highcharts.client.plotOptions.PiePlotOptions;
 import org.moxieapps.gwt.highcharts.client.plotOptions.PlotOptions;
 
-import com.google.gwt.core.client.GWT;
-import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.i18n.client.NumberFormat;
 import com.gwtext.client.widgets.Panel;
 import com.gwtext.client.widgets.form.Label;
 import com.gwtext.client.widgets.layout.VerticalLayout;
@@ -117,8 +116,8 @@ public class Advertise_KJinteration extends Panel{
             		new Point(highchart[3][0], Double.parseDouble(highchart[3][1])),
             		new Point(highchart[4][0], Double.parseDouble(highchart[4][1])),
             		new Point(highchart[5][0], Double.parseDouble(highchart[5][1])),
-            		new Point("else", 100 - (Double.parseDouble(highchart[0][1]) + Double.parseDouble(highchart[1][1]) + Double.parseDouble(highchart[2][1]) +
-            				Double.parseDouble(highchart[3][1]) + Double.parseDouble(highchart[4][1]) + Double.parseDouble(highchart[5][1])))
+            		new Point("else", Double.parseDouble(NumberFormat.getFormat("0.00").format(100 - (Double.parseDouble(highchart[0][1]) + Double.parseDouble(highchart[1][1]) + Double.parseDouble(highchart[2][1]) +
+            				Double.parseDouble(highchart[3][1]) + Double.parseDouble(highchart[4][1]) + Double.parseDouble(highchart[5][1])))))
 //	                new Point("Chungcheongnam-do", 0.06),  
 //	                new Point("Hokkaido", 1.5),  
 //	                new Point("Chubu", 3.78),  
