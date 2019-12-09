@@ -105,7 +105,7 @@ public class KJMembershipServiceImpl extends RemoteServiceServlet implements KJM
 
 //	@Override
 	public void Register_Membership(KJMember kjMember) {
-		// TODO Auto-generated method stub
+		System.out.println("you succesfully connected to server and will register the member.");
 		try {
 			String id = kjMember.getID();
 			String password = kjMember.getPassword();
@@ -129,9 +129,10 @@ public class KJMembershipServiceImpl extends RemoteServiceServlet implements KJM
 					"\", \"" + name + "\", \"" + gender + "\", \"" + birth + "\", \"" + country + "\", \"" + local + 
 					"\", \"" + email + "\", \"" + interests[0] + "\", \"" + interests[1] + "\", \"" + interests[2] + 
 					"\", \"" + interests[3] + "\", \"" + interests[4] + "\");";
-			ResultSet rs1 = stmt.executeQuery(sql);
+			int n = stmt.executeUpdate(sql);
+			System.out.println(n);
 			
-			rs1.close();
+//			rs1.close();
 			stmt.close();
 			con.close();
 		}

@@ -388,13 +388,13 @@ public class Register_Membership extends Window{
 //        				return;
 //        			}
 //        		}
-        		for(int i=0; i<membershipdata.length; i++) {
-        			if(membershipdata[i].equals("")) {
-        				popup.setTitle("Please, input your membership data");
-        				popup.show();
-        				return;
-        			}
-        		}
+//        		for(int i=0; i<membershipdata.length; i++) { //make this disabled temporarily because this doesn't work well.
+//        			if(membershipdata[i].equals("")) {
+//        				popup.setTitle("Please, input your membership data");
+//        				popup.show();
+//        				return;
+//        			}
+//        		}
         		//kjmembership_dataset
         		KJMember kjMember = new KJMember();
 				kjMember.setID(membershipdata[0]);
